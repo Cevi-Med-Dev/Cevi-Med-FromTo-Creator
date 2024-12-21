@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #EBEBEB;
+}
+main{
+    display: flex;
+    height: 100%;
+}
+img.logo{
+    width: 200px;
+}
+aside#left{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid grey;
+    
+}
+form.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+}
+form .input{
+    width: 100%;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #EBEBEB;
+    border: 1px solid #d9d9d9;
+    height: 30px;
+    outline: none;
+    margin: 2%;
+}
+button.sendBtn{
+    border: none;
+    background-color: #C40C11;
+    color: white;
+    border-radius: 5px;
+    width: max-content;
+    height: 25px;
+    padding: 2px 3px;
+}
+button.sendBtn:hover {
+    border: 2px solid #C40C11;
+    background-color: white;
+    color: #C40C11;
+    border-radius: 5px;
+}
+span.split{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+input::placeholder{
+    color: grey;
+}
+aside#right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 35%;
+    overflow-y: scroll;
+}
+.pdf img.logo{
+    width: 80%;
+}
+.pdf span#custName{
+    text-align: center;
+   
+}
+.pdf strong{
+    align-self: flex-end;
+   
+}
+.pdf span#address{
+    width: 100px;
+    color: #C40C11;
+    font-size: 10px;
+}
+.pdf span#prodName{
+    text-align: center;
+    color: #C40C11;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 10px;
+}
+.pdf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+    height:max-content;
+    padding: 10px;
+    margin: 10px;
+}

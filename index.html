@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> From To Replacer </title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<body>
+    <main>
+        <aside id="left">
+            <img class="logo" src="./assets/imgs/logo.png" alt="" srcset="">
+            <form class="form">
+
+
+                <input name="custName" type="text" class="input" placeholder="Customer Name">
+
+                <input name="invoice" type="text" class="input" placeholder="Invoice #">
+
+                <input name="address" type="text" class="input" placeholder="Full Address">
+
+                <input name="prodName" type="text" class="input" placeholder="Product Name">
+
+                <span class="split">
+                    <select class="input" name="route">
+                        <option value="">Route</option>
+                        <option value="North West">North West</option>
+                        <option value="Texas">Texas</option>
+                        <option value="California">California</option>
+                        <option value="East Coast">East Coast</option>
+                        <option value="Chicago">Chicago</option>
+                        <option value="Extended">Extended</option>
+                    </select>
+                    <select class="input" name="Qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                    </select>
+                </span>
+                <button class="sendBtn">
+                    Send To Drive
+                </button>
+
+            </form>
+            <div class="g-savetodrive" data-src="//example.com/path/to/myfile.pdf" data-filename="My Statement.pdf"
+                data-sitename="My Company Name">
+            </div>
+        </aside>
+
+        <aside id="right">
+            <article class="pdf">
+                <img class="logo" src="./assets/imgs/logo.png" alt="" srcset="">
+                <span id="custName"> Customer Name </span>
+                <strong>
+                    <span id="invoice"> Invoice # </span>
+                </strong>
+                <span id="address"> Full Address </span>
+                <span id="prodName">Product Name and Description Specs</span>
+                <span id="route"></span>
+                <span id="qty"></span>
+            </article>
+            
+        </aside>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
