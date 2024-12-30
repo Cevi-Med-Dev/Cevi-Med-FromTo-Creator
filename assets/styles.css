@@ -7,16 +7,16 @@
 body {
     width: 100%;
     height: 100vh;
-    background-color: #EBEBEB;
+ 
 }
 
 main {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: end;
-
+    justify-content: center;
     overflow-y: scroll;
+    background-color: #EBEBEB;
 }
 
 img.logo {
@@ -24,6 +24,7 @@ img.logo {
 }
 
 aside#left {
+    z-index: 1;
     position: fixed;
     height: 100%;
     top: 0;
@@ -86,14 +87,17 @@ input::placeholder {
 }
 
 aside#right {
+    z-index: 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    
     align-items: center;
-    overflow-y: scroll;
+    justify-content: center;
+
     height: max-content;
-    margin-right: 15%;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 25%;
 }
 
 aside#right > article.pdf {
@@ -137,4 +141,32 @@ aside#right > article.pdf {
     border: 2px solid black;
     padding: 5px;
     margin: 10px;
+}
+
+@media (max-width: 850px) {
+    aside#right {
+        align-items: end;
+        justify-content: center;
+
+        height: max-content;
+        width: 100%;
+        margin: 0;
+    
+    }
+    aside#left {
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid grey;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 700px) {
+ body{
+    min-width: 700px;
+ }
 }
