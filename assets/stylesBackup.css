@@ -6,35 +6,36 @@
 
 body {
     width: 100%;
-    height: max-content;
-    background-color: #EBEBEB;
+    height: 100vh;
+ 
 }
 
 main {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    overflow-y: scroll;
+    background-color: #EBEBEB;
 }
 
 img.logo {
-    position: fixed;
-    top: 10px;
-    left: 10px;
     width: 200px;
 }
 
 aside#left {
-    width: 100%;
+    z-index: 1;
+    position: absolute;
+    height: max-content;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid grey;
+    border: 1px solid grey;
     padding: 0 3%;
-    margin: 10px;
 }
 
 form.form {
@@ -87,28 +88,29 @@ input::placeholder {
 }
 
 aside#right {
+    z-index: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    overflow-y: scroll;
-    height: 100vh;
+    justify-content: center;
+    height: max-content;
     width: 100%;
-    margin-top: 50px;
+    overflow: hidden;
 }
 
 aside#right > article.pdf {
     position: relative;
-    width: 397px;
-    height: 545px !important;
-    font-size: 25px;
+    width: 100%;
+    height: 100vh !important;
+    font-size: 60px;
+    letter-spacing: 2px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: white;
     padding: 10px;
-
+    margin: 10px;
 }
 
 .pdf span#custName {
@@ -122,13 +124,13 @@ aside#right > article.pdf {
 }
 
 .pdf small {
-    font-size: 12px;
+    font-size: 30px;
 }
 
 .pdf span#address {
     text-align: center;
     color: #C40C11;
-    font-size: 10px;
+    font-size: 35px;
 }
 
 .pdf span#prodName {
@@ -137,4 +139,31 @@ aside#right > article.pdf {
     border: 2px solid black;
     padding: 5px;
     margin: 10px;
+}
+
+@media (max-width: 850px) {
+    aside#right {
+        align-items: end;
+        justify-content: center;
+        height: max-content;
+        width: 100%;
+        margin: 0;
+    
+    }
+    aside#left {
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid grey;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 700px) {
+ body{
+    min-width: 700px;
+ }
 }

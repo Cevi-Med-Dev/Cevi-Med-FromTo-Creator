@@ -1,9 +1,12 @@
 console.log("running");
-
+var PDFs = ''
 document.querySelector(".sendBtn").addEventListener("click", (e) => {
   e.preventDefault();
   const pdfList = document.querySelector("#right");
   html2pdf(pdfList);
+  PDFs = html2pdf().from(pdfList).save();
+  let driveBtn = document.querySelector(".g-savetodrive")
+  driveBtn.setAttribute(".data-src", PDFs)
 });
 
 let fromToInfo = {};
@@ -14,6 +17,7 @@ Array.from(document.querySelectorAll("input")).forEach((input) => {
     document.getElementById(`${target.name}`).innerText = `${target.value}`;
   });
 });
+
 Array.from(document.querySelectorAll("select")).forEach((input) => {
   input.addEventListener("change", ({ target }) => {
     if (target.name === "route") {
